@@ -35,14 +35,6 @@ public class EmployeeController {
         }
     }
 
-    @GetMapping("/create")
-    public Employee create(){
-        var employee = new Employee();
-        employee.setActive(1);
-        employee.setName("Eduardo Barrera");
-        return employeeService.save(employee);
-    }
-
     @PostMapping("")
     public ResponseEntity<Employee> save(@RequestBody Employee employee){
         return new ResponseEntity<Employee>(employeeService.save(employee),HttpStatus.CREATED);

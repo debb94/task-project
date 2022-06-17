@@ -18,14 +18,6 @@ public class TaskRepository{
 
     public List<Task> getAll(){
         return (List<Task>) taskCrudRepository.findAll();
-//        var list = taskCrudRepository.findAll();
-//        list.forEach(t -> {
-//                t.setEmployee(employeeCrudRepository
-//                        .findById(t.getEmployeeId())
-//                        .orElse(new Employee()));
-//                }
-//        );
-//        return (List<Task>) list;
     }
 
     public Optional<Task> getTask(Integer id){
